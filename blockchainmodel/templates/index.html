@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>比特币模拟系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="markdown clearness">
+<h1>BitCoin模拟系统</h1>
+
+<div title="测试交易">
+    <h2>测试交易</h2>
+    <form method="post">
+        <p>发送者地址：<input type="text" name="sender"/></p>
+        <p>接受者地址: <input type="text" name="recipient"/></p>
+        <p>交易金额$ ：<input type="number" name="amount"/></p>
+        <button type="reset">重置</button>
+        <button type="submit" formaction="/tx/new">确认交易</button>
+    </form>
+    <hr/>
+</div>
+
+<div title="挖矿">
+    <h2>挖矿</h2>
+    <form method="post">
+        <p><input type="text" name="address" placeholder="输入挖矿者地址"/></p>
+        <button type="reset">清除地址</button>
+        <button type="submit" formaction="/mine">开始挖矿</button>
+    </form>
+    <hr>
+</div>
+
+<div title="添加链接节点">
+    <h2>添加链接节点</h2>
+    <form method="post">
+        <p><input type="text" name="address" placeholder="输入链接的节点地址"/></p>
+        <button type="reset">清除节点输入</button>
+        <button type="submit" formaction="/nodes/register">添加节点</button>
+    </form>
+    <hr>
+</div>
+
+<div>
+    <h2>其他一些操作</h2>
+    <form method="get">
+        <ol>
+            <li style="margin-bottom:20px"><button value="确定" type="submit" formaction="/chain">获取全部交易记录</button></li>
+            <li style="margin-bottom:20px"><button value="确定" type="submit" formaction="/tx/not_sure">获取全部未确定交易</button></li>
+            <li style="margin-bottom:20px"><button value="确定" type="submit" formaction="/nodes/resolve">同步交易记录</button></li>
+            <li style="margin-bottom:20px"><button value="确定" type="submit" formaction="/nodes/get_register">查看链接的节点数</button></li>
+        </ol>
+    </form>
+</div>
+
+
+</body>
+</html>
